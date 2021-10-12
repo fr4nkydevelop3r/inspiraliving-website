@@ -9,10 +9,6 @@ const BlogPost = (props) => {
     return (
         <Layout>
             <SEO
-                title={props.data.contentfulPage.title}
-                description={props.data.contentfulPage.description}
-            />
-            <SEO
                 title={props.data.contentfulBlogPost.title}
                 description={props.data.contentfulBlogPost.description}
             />
