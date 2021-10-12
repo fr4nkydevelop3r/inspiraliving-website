@@ -1,5 +1,7 @@
-import React from "react";
-import { createGlobalStyle } from "styled-components";
+import React from 'react'
+import { createGlobalStyle } from 'styled-components'
+import { graphql, useStaticQuery } from 'gatsby'
+import Header from './Header'
 
 const GlobalStyle = createGlobalStyle`
   body{
@@ -12,13 +14,17 @@ const GlobalStyle = createGlobalStyle`
   h1{
     font-size: 2em;
   }
-`;
+`
 
-export const Layout = ({ children }) => {
+const Layout = ({ children }) => {
     return (
         <div>
             <GlobalStyle />
+            <Header />
+
             <section>{children}</section>
         </div>
-    );
-};
+    )
+}
+
+export default Layout
