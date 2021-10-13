@@ -5,8 +5,7 @@ import RichText from '../components/RichText'
 import { graphql } from 'gatsby'
 
 export default function ContentfulPage(props) {
-    console.log(props.data.contentfulPage.pageContent.references)
-
+    //console.log(props.data.contentfulPage.pageContent.references)
     return (
         <Layout>
             <SEO
@@ -53,19 +52,6 @@ export const query = graphql`
                             layout: FULL_WIDTH
                             placeholder: BLURRED
                         )
-                    }
-                    ... on ContentfulPriceGroup {
-                        __typename
-                        contentful_id
-                        priceOptions {
-                            id
-                            title
-                            amountPerMonth
-                            mostPopular
-                            description {
-                                raw
-                            }
-                        }
                     }
                 }
             }

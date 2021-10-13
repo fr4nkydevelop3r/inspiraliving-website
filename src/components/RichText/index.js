@@ -7,7 +7,7 @@ import Hero from '../Hero'
 import PriceGroup from '../PriceGroup'
 
 const RichText = ({ raw, references = [] }) => {
-    // console.log(raw)
+    //console.log(raw)
     //console.log(references)
     const referencesMap = {}
 

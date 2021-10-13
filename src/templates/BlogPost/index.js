@@ -12,7 +12,12 @@ const BlogPost = (props) => {
                 title={props.data.contentfulBlogPost.title}
                 description={props.data.contentfulBlogPost.description}
             />
-            <RichText raw={props.data.contentfulBlogPost.pageContent.raw} />
+            <RichText
+                raw={props.data.contentfulBlogPost.pageContent.raw}
+                references={
+                    props.data.contentfulBlogPost.pageContent.references
+                }
+            />
         </Layout>
     )
 }
@@ -23,6 +28,16 @@ export const query = graphql`
             publishedDate(formatString: "DD MMM YYYY")
             pageContent {
                 raw
+                references {
+                    ... on ContentfulAsset {
+                        contentful_id
+                        title
+                        gatsbyImageData(
+                            layout: FULL_WIDTH
+                            placeholder: BLURRED
+                        )
+                    }
+                }
             }
             description
             title

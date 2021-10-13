@@ -7,7 +7,6 @@ import {
 } from './style'
 import RichText from '../RichText'
 const PriceGroup = ({ priceOptions }) => {
-    console.log(priceOptions)
     return (
         <PriceGroupWrapper>
             {priceOptions.map((priceOption) => (

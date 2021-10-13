@@ -28,6 +28,7 @@ const PaginatedBlogPage = ({ pageContext }) => {
                             to={`/${pageContext.blogSlug}/${
                                 i === 0 ? '' : i + 1
                             }`}
+                            key={pageContext.currentPage}
                         >
                             {i + 1}
                         </Link>
